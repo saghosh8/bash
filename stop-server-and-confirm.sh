@@ -11,7 +11,7 @@ echo
 read -p "Enter server address (hostname or IP): " server_address
 
 # SSH into the server, stop the JBoss process, and check if it's completely stopped
-sshpass -p "$password" ssh -o StrictHostKeyChecking=no "$username@$server_address" << EOF
+ssh -p 2222 username@remote_host "$username@$server_address" << EOF
   cd /path/to/jboss
   echo "Navigated to $(pwd)"
 

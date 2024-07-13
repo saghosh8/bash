@@ -7,7 +7,7 @@ echo
 read -p "Enter server address (hostname or IP): " server_address
 
 # SSH into the server, start the JBoss process, and check if it's completely started
-sshpass -p "$password" ssh -o StrictHostKeyChecking=no "$username@$server_address" << EOF
+ssh -p 2222 "$username@$server_address" << EOF
   cd /path/to/jboss/bin
   echo "Navigated to $(pwd)"
 
